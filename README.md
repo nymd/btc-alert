@@ -5,6 +5,6 @@ Annoy your family and friends with a script that takes over your screen with a v
 
 2. Place both files in the same directory and run the shell script.
 
-3. sudo apt install bc curl jq mpv
-
 Tested on Ubuntu 18.04 / Cinnamon
+
+Requires via APT install: bc curl jq mpv
