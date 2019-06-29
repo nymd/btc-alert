@@ -3,7 +3,7 @@
 # install - bc curl jq mpv
 
 getBTC() {
-  curl -s -H "X-CMC_PRO_API_KEY: 6b2f5a00-4936-4c74-87bb-cb05c66d0d86" -H "Accept: application/json" -d "start=1&limit=5000&convert=USD" -G "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest" > /tmp/bc.tmp
+  curl -s -H "X-CMC_PRO_API_KEY: YOUR_API_KEY_HERE" -H "Accept: application/json" -d "start=1&limit=5000&convert=USD" -G "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest" > /tmp/bc.tmp
   echo "$(cat /tmp/bc.tmp | jq -c '.data | .[] | select(.symbol == "BTC") | .quote.USD.price' | cut -d'.' -f1)"
 }
 
